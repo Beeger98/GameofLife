@@ -11,14 +11,16 @@ namespace GameofLife.GameLogic
         public static bool[,] NextGeneration(bool[,] currentGen)
         {
             var newGen = new bool[currentGen.GetLength(0), currentGen.GetLength(0)];
-            var aliveNeighbors = 0;
+            
             var status = false;
             for (int i = 0; i <= currentGen.GetLength(0) - 1; i++)
             {
+                
                 for (var j = 0; j <= currentGen.GetLength(0) - 1; j++)
                 {
+                    var aliveNeighbors = 0;
                     // Töten den Rand
-                    if(j == 0 || i == 0 || i == currentGen.GetLength(0) - 1 || j == currentGen.GetLength(1) - 1)
+                    if (j == 0 || i == 0 || i == currentGen.GetLength(0) - 1 || j == currentGen.GetLength(1) - 1)
                     {
                         continue;
                     }

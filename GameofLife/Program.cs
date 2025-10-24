@@ -7,8 +7,8 @@ namespace GameofLife
     {
         static void Main(string[] args)
         {
-            var spawnCells = 15;
-            var fieldsize = 15;
+            var spawnCells = 400;
+            var fieldsize = 100;
             var simulationrounds = 10;
             var startingField = Spawn.CreateField(fieldsize, spawnCells);
             Draw.PrintGrid(startingField);
